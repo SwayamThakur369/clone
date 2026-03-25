@@ -427,3 +427,13 @@ h2 {
     gap: 0.6rem;
   }
 }
+
+/* Services Dropdown Custom Click/Active Logic */
+.nav-item-services.active .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-item-services.active .dropdown-icon {
+  transform: rotate(180deg);
+}
