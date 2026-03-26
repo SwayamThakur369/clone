@@ -428,12 +428,44 @@ h2 {
   }
 }
 
-/* Services Dropdown Custom Click/Active Logic */
 .nav-item-services.active .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0);
 }
 
 .nav-item-services.active .dropdown-icon {
   transform: rotate(180deg);
+}
+
+/* Global Layout Standardization */
+.layout-container {
+  max-width: 80rem; /* 1280px - matches max-w-7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .layout-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Header Shimmer/Glass effect */
+#global-header {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Animation for dropdown menu */
+.dropdown-menu {
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.nav-item-services.active .dropdown-menu {
+  pointer-events: auto;
 }

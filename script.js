@@ -34,18 +34,5 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Services Dropdown Click Logic
-const servicesBtn = document.getElementById("services-btn");
-const servicesWrapper = document.getElementById("services-dropdown-wrapper");
-
-if (servicesBtn && servicesWrapper) {
-  servicesBtn.addEventListener("click", (event) => {
-    servicesWrapper.classList.toggle("active");
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!servicesWrapper.contains(event.target)) {
-      servicesWrapper.classList.remove("active");
-    }
-  });
-}
+// Note: Services Dropdown Logic is now handled by components/header.js
+// to ensure consistency across all injected headers.
